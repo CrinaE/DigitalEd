@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using ClassLibraryTest;
 namespace DigitalEdu
 {
     public class Startup
@@ -30,6 +30,7 @@ namespace DigitalEdu
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -38,6 +39,7 @@ namespace DigitalEdu
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+            services.AddSingleton<ITestRepo, TestRepo>();
             services.AddSingleton<WeatherForecastService>();
 
             services.AddAuthentication().AddGoogle(googleOptions =>
@@ -45,6 +47,8 @@ namespace DigitalEdu
                 googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
                 googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
             });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,5 +79,7 @@ namespace DigitalEdu
                 endpoints.MapFallbackToPage("/_Host");
             });
         }
+
+        
     }
 }
