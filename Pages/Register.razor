@@ -1,0 +1,78 @@
+﻿@page "/Register"
+@inject NavigationManager _navigationManager
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register2 - DigitalEdu</title>
+
+
+    <link rel="stylesheet" href="/Identity/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/Identity/css/site.css">
+
+
+</head>
+<body>
+    <div class="container">
+
+        <main role="main" class="pb-1">
+
+            <h1>Register</h1>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <form id="registerForm" method="post" action="/Identity/Account/Register" novalidate="novalidate">
+                        <h4>Create a new account.</h4>
+                        <hr>
+                        <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                            <ul>
+                                <li style="display:none"></li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <label for="Input_Email">Email</label>
+                            <input class="form-control" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Input_Email" name="Input.Email" value="">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Input_Password">Password</label>
+                            <input class="form-control" type="password" data-val="true" data-val-length="The Password must be at least 6 and at max 100 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Input_Password" maxlength="100" name="Input.Password">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Input_ConfirmPassword">Confirm password</label>
+                            <input class="form-control" type="password" data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="Input_ConfirmPassword" name="Input.ConfirmPassword">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Input.ConfirmPassword" data-valmsg-replace="true"></span>
+                        </div>
+                        <button id="registerSubmit" type="submit" class="btn btn-primary">Register</button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DUyryf7GzNEt2OHARk3__T5f5FHXs3xuV0W_KjFGxOBXk40ol1V-8t1lZzC-g1QJWma55pyxxwYFv5Y6i2QToGe7TFrWu4nRkWmTwKn20rLhMUHKlLn67HMQ-JBvoZf5uprEYWKCHOD677CnrKVpUs">
+                    </form>
+                </div>
+                <div class="col-md-6 col-md-offset-2">
+                    <section>
+                        <h4>Use another service to register.</h4>
+                        <hr>
+                            <div>
+                                <p>
+                                    <button type="submit" class="btn btn-primary" name="provider" value="Google" title="Log in using your Google account" @onclick="GoogleSignIn">Google</button>
+                                    <button type="submit" class="btn btn-primary" name="provider" value="Facebook" title="Log in using your Facebook account" @onclick="FacebookSignIn">Facebook</button>
+                                </p>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+@code {
+    private void GoogleSignIn()
+    {
+        _navigationManager.NavigateTo($"/api/user/GoogleSignIn", true);
+    }
+    private void FacebookSignIn()
+    {
+        _navigationManager.NavigateTo($"/api/user/FacebookSignIn", true);
+    }
+}
