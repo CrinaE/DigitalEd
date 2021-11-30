@@ -2,10 +2,17 @@
 {
     public class QuestionModel
     {
-        /*public int QuestionId { get; set;}
-        public string QuestionName { get; set;}
+        //QuestionID pk
+        public int QuestionId { get; set;}
 
-        public int Id { get; set;}
-        public PersonModel PersonModel { get; set;}*/
+        //IdPerson FK -> PersonModel.cs IdPerson
+        public int IdPerson { get; set; }
+        public string QuestionName { get; set;}
+        public PersonModel PersonModel { get; set;}
+
+        public int LikeQuestion { get; set;}
+
+        public string Class { get; set;}
+        
     }
 }
