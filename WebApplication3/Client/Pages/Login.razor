@@ -1,0 +1,44 @@
+﻿@page "/LogIn"
+@inject NavigationManager _navigationManager
+
+<h2><b>Login</b></h2>
+<hr>
+
+<div class="col-6">
+    <input type="text"  class="form-control" placeholder="email address">
+</div>
+<br />
+<div class="col-6">
+    <input type="password"  class="form-control" placeholder="password">
+</div>
+<br />
+<div class="col-6">
+    <button class="btn btn-primary" @onclick="LoginUser">Login</button>
+</div>
+<br />
+<br />
+<div class="col-6">
+    <button class="btn btn-primary" @onclick="FacebookSignIn">Facebook</button>
+</div>
+<br />
+<div class="col-6">
+    <button class="btn btn-danger" @onclick="GoogleSignIn">Google</button>
+</div>
+
+@code {
+    public async Task LoginUser()
+    {
+        //await _loginViewModel.LoginUser();
+        _navigationManager.NavigateTo("/", true);
+    }
+
+    private void FacebookSignIn()
+    {
+        _navigationManager.NavigateTo("user/FacebookSignIn", true);
+    }
+
+    private void GoogleSignIn()
+    {
+        _navigationManager.NavigateTo("user/GoogleSignIn", true);
+    }
+}
