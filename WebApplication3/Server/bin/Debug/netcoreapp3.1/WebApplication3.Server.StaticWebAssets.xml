@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\S2018-438316\source\repos\WebApplication3\WebApplication3\Client\bin\Debug\netstandard2.1\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\S2018-438316\source\repos\WebApplication3\WebApplication3\Client\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\wwwroot\" />
 </StaticWebAssets>
