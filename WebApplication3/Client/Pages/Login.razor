@@ -1,15 +1,17 @@
 ﻿@page "/LogIn"
 @inject NavigationManager _navigationManager
+@using WebApplication3.Client.ViewModels
+@inject ILoginViewModel _loginViewModel
 
 <h2><b>Login</b></h2>
 <hr>
 
 <div class="col-6">
-    <input type="text"  class="form-control" placeholder="email address">
+    <input type="text" @bind="_loginViewModel.EmailAddress"  class="form-control" placeholder="email address">
 </div>
 <br />
 <div class="col-6">
-    <input type="password"  class="form-control" placeholder="password">
+    <input type="password" @bind="_loginViewModel.Password"  class="form-control" placeholder="password">
 </div>
 <br />
 <div class="col-6">
@@ -28,7 +30,7 @@
 @code {
     public async Task LoginUser()
     {
-        //await _loginViewModel.LoginUser();
+        await _loginViewModel.LoginUser();
         _navigationManager.NavigateTo("/", true);
     }
 
