@@ -1,7 +1,26 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net5.0": {
+      "BlazorInputFile/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0-preview3.19555.2",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0-preview3.19555.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/BlazorInputFile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/BlazorInputFile.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorInputFile.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorInputFile.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1177,8 +1196,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "BlazorInputFile": "0.2.0",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Components.Authorization": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6",
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.1",
           "SQLite": "3.13.0",
           "System.Net.Http.Json": "3.2.0",
@@ -1207,6 +1228,24 @@
     }
   },
   "libraries": {
+    "BlazorInputFile/0.2.0": {
+      "sha512": "wsPTwoA9fkHOxjEh0W0brNeTaVBaMCFwfBLehbRhfW+RzlIrYtlJ5qFpT5f377Ej6ELk+xeoUrkDBx9c8JF7DQ==",
+      "type": "package",
+      "path": "blazorinputfile/0.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazorinputfile.0.2.0.nupkg.sha512",
+        "blazorinputfile.nuspec",
+        "build/BlazorInputFile.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorInputFile.props",
+        "buildTransitive/BlazorInputFile.props",
+        "lib/netstandard2.0/BlazorInputFile.dll",
+        "lib/netstandard2.1/BlazorInputFile.dll",
+        "staticwebassets/inputfile.js"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "sha512": "b0R9X7L6zMqNsssKDvhYHuNi5x0s4DyHTeXybIAyGaitKiW1Q5aAGKdV2codHPiePv9yHfC9hAMyScXQ/xXhPw==",
       "type": "package",
@@ -3336,7 +3375,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
+    "net5.0": [
       "Microsoft.AspNetCore.Authentication.Facebook >= 3.1.6",
       "Microsoft.AspNetCore.Authentication.Google >= 3.0.0",
       "Microsoft.AspNetCore.Authorization >= 3.1.6",
@@ -3369,15 +3408,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
             "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj": {
               "projectPath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj"
@@ -3395,8 +3434,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Facebook": {
             "target": "Package",

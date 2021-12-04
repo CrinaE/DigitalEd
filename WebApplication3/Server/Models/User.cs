@@ -17,6 +17,7 @@ namespace WebApplication3.Server.Models
         public string Password { get; set; }
         public string Token { get; set; }
         public int? Points { get; set; }
+        public string ProfilePic { get; set; }
 
         public virtual Answers Answers { get; set; }
         public virtual ICollection<Question> Question { get; set; }

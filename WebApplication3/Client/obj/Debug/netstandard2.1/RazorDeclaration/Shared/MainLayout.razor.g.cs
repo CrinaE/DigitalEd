@@ -97,7 +97,7 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Shared\MainLayout.razor"
+#line 31 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Shared\MainLayout.razor"
       
 
     private async Task LogoutUser()
@@ -109,6 +109,11 @@ using Microsoft.AspNetCore.Components.Authorization;
     private void LoginUser()
     {
         _navigationManager.NavigateTo("/LogIn", true);
+    }
+
+    private void RegisterUser()
+    {
+        _navigationManager.NavigateTo("/register", true);
     }
 
 

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t9UYzogUe/n6KUkm4WPEjP7NpIgB0PmFVSF6mZDYLRgobwnLQPMlq2jQV0K4ka2uHz2n/18168UC3g03N7ueCg==",
+  "dgSpecHash": "xqkLlFd6YWn/4GOyPVnj0WcimdgCAPYxZR+/NVkoN0hL3e7GxSjoW0Crmc7cLLnCW9J7WlPSf55iICE2DYvnTQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\S2018-438316\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

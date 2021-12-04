@@ -44,11 +44,19 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "BlazorInputFile": {
+              "target": "Package",
+              "version": "[0.2.0, )"
+            },
             "Microsoft.AspNetCore.Authentication": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
               "version": "[3.1.6, )"
             },
@@ -108,15 +116,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
               "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj": {
                 "projectPath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj"
@@ -134,8 +142,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",

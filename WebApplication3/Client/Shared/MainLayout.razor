@@ -17,6 +17,7 @@
         </Authorized>
         <NotAuthorized>
             <div class="top-row px-4">
+                <button class="btn btn-primary" @onclick="RegisterUser">Register</button>&nbsp;
                 <button class="btn btn-primary" @onclick="LoginUser">Login</button>
             </div>
         </NotAuthorized>
@@ -38,6 +39,11 @@
     private void LoginUser()
     {
         _navigationManager.NavigateTo("/LogIn", true);
+    }
+
+    private void RegisterUser()
+    {
+        _navigationManager.NavigateTo("/register", true);
     }
 
 }

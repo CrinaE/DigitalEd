@@ -29,12 +29,14 @@ namespace WebApplication3.Server.Controllers
         [HttpPost("loginuser")]
         public async Task<ActionResult<User>> LoginUser(User user)
         {
+            //user.Password = Utility.Encrypt(user.Password);
             User loggedInUser = await _context.User.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
 
             if(loggedInUser != null)
             {
                 var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);
-                var claimsIdentity = new ClaimsIdentity(new[] { claim }, "serverAuth");
+                var claimid = new Claim(ClaimTypes.NameIdentifier, Convert.ToString(loggedInUser.Id));
+                var claimsIdentity = new ClaimsIdentity(new[] { claim, claimid }, "serverAuth");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 await HttpContext.SignInAsync(claimsPrincipal);
             }
@@ -46,10 +48,16 @@ namespace WebApplication3.Server.Controllers
         public async Task<ActionResult<User>> GetCurrentUser()
         {
             User currentUser = new User();
-
             if (User.Identity.IsAuthenticated)
             {
                 currentUser.Email = User.FindFirstValue(ClaimTypes.Name);
+                currentUser = await _context.User.Where(u => u.Email == currentUser.Email).FirstOrDefaultAsync();
+                if (currentUser==null)
+                {
+                    currentUser = new User();
+                    currentUser.Email = User.FindFirstValue(ClaimTypes.Email);
+                    currentUser.Id = 3;
+                }
             }
 
             return await Task.FromResult(currentUser);
@@ -89,6 +97,7 @@ namespace WebApplication3.Server.Controllers
             userToUpdate.FirstName = user.FirstName;
             userToUpdate.LastName = user.LastName;
             userToUpdate.Email = user.Email;
+            userToUpdate.ProfilePic = user.ProfilePic;
 
            await _context.SaveChangesAsync();
 

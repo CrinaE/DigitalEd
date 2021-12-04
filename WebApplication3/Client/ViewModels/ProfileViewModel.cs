@@ -15,6 +15,8 @@ namespace WebApplication3.Client.ViewModels
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string Message { get; set; }
+        public string ProfilePic { get; set; }
+
 
         private HttpClient _httpClient;
 
@@ -31,13 +33,13 @@ namespace WebApplication3.Client.ViewModels
         public async Task UpdateProfile()
         {
             User user = this;
-            await _httpClient.PutAsJsonAsync("user/updateprofile/1", user);
+            await _httpClient.PutAsJsonAsync("user/updateprofile/" + this.UserId, user);
             this.Message = "Profile updated successfully";
         }
 
         public async Task GetProfile()
         {
-            User user = await _httpClient.GetFromJsonAsync<User>("user/getprofile/1");
+            User user = await _httpClient.GetFromJsonAsync<User>("user/getprofile/" + this.UserId);
             LoadCurrentObject(user);
             this.Message = "Profile loaded successfully";
         }
@@ -47,6 +49,7 @@ namespace WebApplication3.Client.ViewModels
             this.FirstName = profileViewModel.FirstName;
             this.LastName = profileViewModel.LastName;
             this.EmailAddress = profileViewModel.EmailAddress;
+            this.ProfilePic = profileViewModel.ProfilePic;
             //add more fields
         }
 
@@ -57,7 +60,8 @@ namespace WebApplication3.Client.ViewModels
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 EmailAddress = user.Email,
-                UserId = user.Id
+                UserId = user.Id,
+                ProfilePic = user.ProfilePic
             };
         }
 
@@ -68,7 +72,8 @@ namespace WebApplication3.Client.ViewModels
                 FirstName = profileViewModel.FirstName,
                 LastName = profileViewModel.LastName,
                 Email = profileViewModel.EmailAddress,
-                Id = (int)profileViewModel.UserId
+                Id = (int)profileViewModel.UserId,
+                ProfilePic = profileViewModel.ProfilePic
             };
         }
     }
