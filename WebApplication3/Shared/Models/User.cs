@@ -13,5 +13,7 @@ namespace WebApplication3.Shared.Models
         public string Password { get; set; }
         public string Token { get; set; }
         public int? Points { get; set; }
+        public string ProfilePic { get; set; }
+
     }
 }

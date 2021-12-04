@@ -20,6 +20,7 @@ namespace WebApplication3.Client.ViewModels
         public LoginViewModel(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            
         }
 
 

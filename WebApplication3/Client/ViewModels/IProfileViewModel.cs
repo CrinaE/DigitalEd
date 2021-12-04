@@ -12,6 +12,8 @@ namespace WebApplication3.Client.ViewModels
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string Message { get; set; }
+        public string ProfilePic { get; set; }
+
 
         public Task UpdateProfile();
 

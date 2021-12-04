@@ -24,8 +24,9 @@ namespace WebApplication3.Client
             User currentUser = await _httpClient.GetFromJsonAsync<User>("user/getcurrentuser");
             if (currentUser != null && currentUser.Email != null)
             {
-                var claim = new Claim(ClaimTypes.Name, currentUser.Email);
-                var claimsIdentity = new ClaimsIdentity(new[] { claim }, "serverAuth");
+                var claimemail = new Claim(ClaimTypes.Name, currentUser.Email);
+                var claimid = new Claim(ClaimTypes.NameIdentifier, Convert.ToString(currentUser.Id));
+                var claimsIdentity = new ClaimsIdentity(new[] { claimemail, claimid }, "serverAuth");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 return new AuthenticationState(claimsPrincipal);
             }
