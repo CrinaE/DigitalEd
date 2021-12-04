@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\TWumbAx7xu-tBVhMEDpH5f9TsxJnvyQlxB9SJk0ccuE=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ppvBq3yk4idOoyNoawizj1uoCZ3pZc0JQmBTj8CgmPg=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication3.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication3.Client.dll.gz"
     },
@@ -286,7 +286,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.Authorization.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\utVtRtJ2h4etgvxGBYErfFTZYjTUstfcQYI5oc09DIY=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\iCfvjzSKZlJt0IdH_P-I6DWeHEET32vKnWGSj3WU6RA=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication3.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication3.Client.pdb.gz"
     },
@@ -316,7 +316,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\lw78WOAM42k7YwEnui75bEpdtDxdBbOBp7xtupzc9dE=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\xhnHgjSFCfrA2O_FO_2Wodqx_ZSVmklsIpZY1aUtzns=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }

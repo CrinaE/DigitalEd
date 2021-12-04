@@ -91,13 +91,20 @@ using Microsoft.AspNetCore.Components.Authorization;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
+using WebApplication3.Client.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
 using BlazorInputFile;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
+#line 5 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
 using System.IO;
 
 #line default
@@ -112,7 +119,7 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
+#line 25 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
        
     public string ProfilePicDataUrl { get; set; }
 
@@ -121,18 +128,25 @@ using System.IO;
         var file = files.FirstOrDefault();
         var img = await file.ToImageFileAsync("image/jpeg", 250, 250);
         MemoryStream memory = await img.ReadAllAsync();
-        ProfilePicDataUrl = ToDataUrl(memory, "image/jpeg");
+        _registerViewModel.ProfilePic = ToDataUrl(memory, "image/jpeg");
     }
     public string ToDataUrl(MemoryStream data, string format)
     {
         var span = new Span<byte>(data.GetBuffer()).Slice(0, (int)data.Length);
         return $"data:{format};base64,{Convert.ToBase64String(span)}";
     }
+    public async Task RegisterUser()
+    {
+        await _registerViewModel.SaveProfile();
+        _navigationManager.NavigateTo("/", true);
+    }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IRegisterViewModel _registerViewModel { get; set; }
     }
 }
 #pragma warning restore 1591

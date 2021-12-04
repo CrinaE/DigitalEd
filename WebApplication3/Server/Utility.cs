@@ -16,5 +16,7 @@ namespace WebApplication3.Server
             byte[] bytes = provider.ComputeHash(Encoding.UTF32.GetBytes(salt + password));
             return BitConverter.ToString(bytes).Replace("-", "").ToLower();
         }
+
+        
     }
 }

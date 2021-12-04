@@ -13,16 +13,17 @@ namespace WebApplication3.Client.ViewModels
         public string EmailAddress { get; set; }
         public string Password { get; set; }
         private HttpClient _httpClient;
+
         public LoginViewModel()
         {
 
         }
+
         public LoginViewModel(HttpClient httpClient)
         {
             _httpClient = httpClient;
             
         }
-
 
         public async Task LoginUser()
         {
