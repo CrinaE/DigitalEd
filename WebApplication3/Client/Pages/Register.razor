@@ -1,23 +1,25 @@
 ﻿@page "/register"
+@using WebApplication3.Client.ViewModels
+@inject IRegisterViewModel _registerViewModel
 @using BlazorInputFile
 @using System.IO
+@inject NavigationManager _navigationManager
 
 <h3>Register</h3>
 <div class="col-12">
     <div class="col-8">
-        <input type="text" class="form-control" placeholder="first name">
+        <input type="text" @bind-value="_registerViewModel.FirstName" class="form-control" placeholder="first name">
         <br />
-        <input type="text" class="form-control" placeholder="last name">
+        <input type="text" @bind-value="_registerViewModel.LastName" class="form-control" placeholder="last name">
         <br />
-        <input type="text" class="form-control" placeholder="email address">
+        <input type="text" @bind-value="_registerViewModel.EmailAddress" class="form-control" placeholder="email address">
         <br />
-        <input type="password" class="form-control" placeholder="password">
+        <input type="password" @bind-value="_registerViewModel.Password" class="form-control" placeholder="password">
         <br />
-        <img src="@ProfilePicDataUrl" style="width: 250px; height: 250px;"> <br /> <br />
+        <img src="@_registerViewModel.ProfilePic" style="width: 250px; height: 250px;"> <br /> <br />
         <InputFile OnChange="@OnInputFileChanged"></InputFile>
         <br />
-
-        <button class="btn btn-primary">Sing up!</button>
+        <button class="btn btn-primary" @onclick="RegisterUser">Sing up!</button>
     </div>
 </div>
 @code {
@@ -28,12 +30,17 @@
         var file = files.FirstOrDefault();
         var img = await file.ToImageFileAsync("image/jpeg", 250, 250);
         MemoryStream memory = await img.ReadAllAsync();
-        ProfilePicDataUrl = ToDataUrl(memory, "image/jpeg");
+        _registerViewModel.ProfilePic = ToDataUrl(memory, "image/jpeg");
     }
     public string ToDataUrl(MemoryStream data, string format)
     {
         var span = new Span<byte>(data.GetBuffer()).Slice(0, (int)data.Length);
         return $"data:{format};base64,{Convert.ToBase64String(span)}";
+    }
+    public async Task RegisterUser()
+    {
+        await _registerViewModel.SaveProfile();
+        _navigationManager.NavigateTo("/", true);
     }
 
 }

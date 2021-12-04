@@ -29,10 +29,10 @@ namespace WebApplication3.Server.Controllers
         [HttpPost("loginuser")]
         public async Task<ActionResult<User>> LoginUser(User user)
         {
-            //user.Password = Utility.Encrypt(user.Password);
+            user.Password = Utility.Encrypt(user.Password);
             User loggedInUser = await _context.User.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
-
-            if(loggedInUser != null)
+            //"8d77353ef8af557af07fa7a80ff74c6b"
+            if (loggedInUser != null)
             {
                 var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);
                 var claimid = new Claim(ClaimTypes.NameIdentifier, Convert.ToString(loggedInUser.Id));
@@ -88,6 +88,22 @@ namespace WebApplication3.Server.Controllers
             return _context.User.ToList();
             
         }
+
+        [HttpPut("newuser")]
+        public async Task<ActionResult<User>> NewProfile(User user)
+        {
+          User newUser = new User();
+            newUser.Id = _context.User.Max(user => user.Id) + 1;
+            newUser.FirstName = user.FirstName;
+            newUser.LastName = user.LastName;
+            newUser.Email = user.Email;
+            newUser.Password = Utility.Encrypt(user.Password);
+            newUser.ProfilePic = user.ProfilePic;
+            _context.User.Add(newUser);
+            await _context.SaveChangesAsync();
+            return await Task.FromResult(newUser);
+        }
+
         [HttpPut("updateprofile/{userId}")]
         public async Task<User> UpdateProfile(int userId, [FromBody] User user)
         {

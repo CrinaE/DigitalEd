@@ -23,6 +23,7 @@ namespace WebApplication3.Client
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddSingleton<IProfileViewModel, ProfileViewModel>();
             builder.Services.AddSingleton<ILoginViewModel, LoginViewModel>();
+            builder.Services.AddSingleton<IRegisterViewModel, RegisterViewModel>();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             var host = builder.Build();
             await host.RunAsync();
