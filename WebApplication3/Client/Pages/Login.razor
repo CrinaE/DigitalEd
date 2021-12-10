@@ -36,7 +36,13 @@
         public async Task LoginUser()
         {
             await _loginViewModel.LoginUser();
-            _navigationManager.NavigateTo("/", true);
+
+            if (_loginViewModel.EmailAddress.Contains('@') && _loginViewModel.EmailAddress!=null)
+             {
+                 if (_loginViewModel.Password != null)
+                      _navigationManager.NavigateTo("/", true);
+              }
+             
         }
 
         private void FacebookSignIn()

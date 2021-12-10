@@ -2590,19 +2590,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\S2018-438316\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
       "projectName": "WebApplication3.Client",
-      "projectPath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
-      "packagesPath": "C:\\Users\\S2018-438316\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\DigitalEd\\WebApplication3\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\S2018-438316\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2616,8 +2616,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {
-              "projectPath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj"
+            "C:\\Users\\User\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj"
             }
           }
         }
@@ -2686,7 +2686,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

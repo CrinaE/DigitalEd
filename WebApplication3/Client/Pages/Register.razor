@@ -40,7 +40,10 @@
     public async Task RegisterUser()
     {
         await _registerViewModel.SaveProfile();
-        _navigationManager.NavigateTo("/", true);
+        if (_registerViewModel.EmailAddress.Contains('@') && _registerViewModel.EmailAddress != null)
+            if(_registerViewModel.FirstName!=null && _registerViewModel.LastName!=null)
+                if (_registerViewModel.Password != null)
+                   _navigationManager.NavigateTo("/", true);
     }
 
 }

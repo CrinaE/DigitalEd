@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gTnOct0UOP4wZmQ2ahq4Vab0/GRiS1s4rC1yaWW2fkhkeQYHLixn8nC9SFFIQt0KyMTXDFI17AE2YTEo+MMmyg==",
+  "dgSpecHash": "jCniRX3vrSCpCq4YsKhDCw/rwgnkpK+VmnYZi/iQ9VRDTZMp9Z0vQYWNNA5rIBLSBbytf87GPN/SlLRE9iD6/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
+  "projectFilePath": "C:\\Users\\User\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\S2018-438316\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512"
   ],
   "logs": []
 }
