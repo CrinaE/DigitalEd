@@ -1,0 +1,17 @@
+﻿@page "/question/{QId:int}"
+@inject NavigationManager _navigationManager
+@using WebApplication3.Client.ViewModels
+@inject IQuestionViewModel _questionViewModel
+<h1>Question</h1>
+<h2>@_questionViewModel.Title</h2>
+<h3>@_questionViewModel.Contents</h3>
+@code {
+    [Parameter]
+    public int QId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _questionViewModel.Id = QId;
+        await _questionViewModel.LoadaQeustion();
+    }
+}
