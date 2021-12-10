@@ -845,6 +845,6 @@ C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debu
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\ObUT46dW7yOk4N1L_lJ0n_vOSmx5mBqiMMWHvWNM7Ng=.hash
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\YourQuestions.razor.g.cs
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\Razor\Pages\YourQuestions.razor.g.cs
-C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\aV9lW0vGZ_1bCOqDsuWLB36xwB_6KdLCpboKj06sDv0=.hash
-C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\Hztk9MBc8LqYTXBBOzPsLi2RKs177Mftz-mxcVJElYs=.hash
-C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\xHMTnIMPJUYx4dmCDAlo-H8spejre4UKBaPFJ0aMbNw=.hash
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\qiUOv4VZCtfg3UUN2exZwyOb0ZAl4w8bjooRKL5qHpg=.hash
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\aHmCxZf4ONAI-_awJy3YVv7jfnvqUxWByoT6k3rsWN0=.hash
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\CwR7FKKVU47o94rqOOGTVRrHZlVg8DtjXLHJa8869lU=.hash
