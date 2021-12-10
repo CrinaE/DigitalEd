@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ppvBq3yk4idOoyNoawizj1uoCZ3pZc0JQmBTj8CgmPg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\aV9lW0vGZ_1bCOqDsuWLB36xwB_6KdLCpboKj06sDv0=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication3.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication3.Client.dll.br"
     },
@@ -276,7 +276,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\KNBA59MMDzxmo1vRrkNB5ctDibWVzVlqd02inCRPsBs=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\EL4JxUoySRsm7MvUELzzcuq2_LJWw0i48g0Mdx2r-GI=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication3.Shared.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication3.Shared.dll.br"
     },
@@ -286,12 +286,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.Authorization.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\iCfvjzSKZlJt0IdH_P-I6DWeHEET32vKnWGSj3WU6RA=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Hztk9MBc8LqYTXBBOzPsLi2RKs177Mftz-mxcVJElYs=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication3.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication3.Client.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\rfil0brbzGXajWH3fIPJAJHlxAMPITJOZi8O4BRoCHg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ObUT46dW7yOk4N1L_lJ0n_vOSmx5mBqiMMWHvWNM7Ng=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebApplication3.Shared.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebApplication3.Shared.pdb.br"
     },
@@ -316,7 +316,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\xhnHgjSFCfrA2O_FO_2Wodqx_ZSVmklsIpZY1aUtzns=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\xHMTnIMPJUYx4dmCDAlo-H8spejre4UKBaPFJ0aMbNw=.hash",
       "Source": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }

@@ -31,7 +31,6 @@ namespace WebApplication3.Server.Controllers
         {
             user.Password = Utility.Encrypt(user.Password);
             User loggedInUser = await _context.User.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
-            //"8d77353ef8af557af07fa7a80ff74c6b"
             if (loggedInUser != null)
             {
                 var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);

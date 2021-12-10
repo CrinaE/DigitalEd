@@ -1,0 +1,47 @@
+﻿@page "/addQuestion"
+@using BlazorInputFile
+@using System.IO
+@using WebApplication3.Client.ViewModels
+@inject NavigationManager _navigationManager
+@inject IQuestionViewModel _questionViewModel
+@using Microsoft.AspNetCore.Components.Authorization
+@inherits LayoutComponentBase
+
+<h3>AddQuestion</h3>
+<hr>
+
+<div class="col-12">
+    <AuthorizeView>
+        <div class="col-8">
+            <input type="text" @bind="_questionViewModel.Title" class="form-control" placeholder="Title">
+            <br />
+            <textarea class="form-control" @bind="_questionViewModel.Contents" placeholder="Contetnt"></textarea>
+            <br />
+            <img src="" style="width: 250px; height: 250px;"> <br /> <br />
+            <InputFile OnChange="@OnInputFileChanged"></InputFile>
+            <br />
+            <button class="btn btn-primary" @onclick="Add">Add a new Question</button>
+        </div>
+    </AuthorizeView>
+    
+</div>
+
+@code {
+    public async Task Add()
+    {
+        await _questionViewModel.Add();
+        _navigationManager.NavigateTo("/", true);
+    }
+    private async Task OnInputFileChanged(IFileListEntry[] files)
+    {
+        var file = files.FirstOrDefault();
+        var img = await file.ToImageFileAsync("image/jpeg", 250, 250);
+        MemoryStream memory = await img.ReadAllAsync();
+        //_registerViewModel.ProfilePic = ToDataUrl(memory, "image/jpeg");
+    }
+    public string ToDataUrl(MemoryStream data, string format)
+    {
+        var span = new Span<byte>(data.GetBuffer()).Slice(0, (int)data.Length);
+        return $"data:{format};base64,{Convert.ToBase64String(span)}";
+    }
+}

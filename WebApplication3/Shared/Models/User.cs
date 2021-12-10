@@ -6,6 +6,11 @@ namespace WebApplication3.Shared.Models
 {
     public class User
     {
+        public User()
+        {
+            Question = new HashSet<Question>();
+        }
+
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -15,5 +20,7 @@ namespace WebApplication3.Shared.Models
         public int? Points { get; set; }
         public string ProfilePic { get; set; }
 
+        public Answers Answers { get; set; }
+        public virtual ICollection<Question> Question { get; set; }
     }
 }
