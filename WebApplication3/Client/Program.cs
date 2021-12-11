@@ -25,7 +25,7 @@ namespace WebApplication3.Client
             builder.Services.AddSingleton<ILoginViewModel, LoginViewModel>();
             builder.Services.AddSingleton<IRegisterViewModel, RegisterViewModel>();
             builder.Services.AddSingleton<IQuestionViewModel, QuestionViewModel>();
-
+            builder.Services.AddSingleton<IAnswerViewModel, AnswerViewModel>();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             var host = builder.Build();
             await host.RunAsync();

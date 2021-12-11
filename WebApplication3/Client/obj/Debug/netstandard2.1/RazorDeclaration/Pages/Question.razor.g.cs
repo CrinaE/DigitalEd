@@ -105,10 +105,16 @@ using WebApplication3.Client.ViewModels;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Question.razor"
+#line 11 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Question.razor"
        
     [Parameter]
     public int QId { get; set; }
+
+    public void add()
+    {
+        _answerViewModel.IdQuestion = QId;
+        _answerViewModel.Add();
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -119,6 +125,7 @@ using WebApplication3.Client.ViewModels;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IAnswerViewModel _answerViewModel { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IQuestionViewModel _questionViewModel { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navigationManager { get; set; }
     }

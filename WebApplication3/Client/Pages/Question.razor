@@ -2,12 +2,21 @@
 @inject NavigationManager _navigationManager
 @using WebApplication3.Client.ViewModels
 @inject IQuestionViewModel _questionViewModel
+@inject IAnswerViewModel _answerViewModel
 <h1>Question</h1>
 <h2>@_questionViewModel.Title</h2>
 <h3>@_questionViewModel.Contents</h3>
+<button class="btn btn-primary" @onclick="add">Put your answer</button>
+<br />
 @code {
     [Parameter]
     public int QId { get; set; }
+
+    public void add()
+    {
+        _answerViewModel.IdQuestion = QId;
+        _answerViewModel.Add();
+    }
 
     protected override async Task OnInitializedAsync()
     {
