@@ -16,6 +16,7 @@ namespace WebApplication3.Server.Models
         public int? Likes { get; set; }
         public string Contents { get; set; }
         public int? IdSubject { get; set; }
+        public string Picture { get; set; }
 
         public virtual Subjects IdSubjectNavigation { get; set; }
         public virtual User IdUserNavigation { get; set; }

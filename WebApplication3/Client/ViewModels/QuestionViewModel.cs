@@ -15,6 +15,7 @@ namespace WebApplication3.Client.ViewModels
         public string Title { get; set; }
         public int? Likes { get; set; }
         public string Contents { get; set; }
+        public string Picture { get; set; }
         public int? IdSubject { get; set; }
         public List<Question> Question { get; set; }
         public List<Question> YourQuestion { get; set; }
@@ -66,7 +67,8 @@ namespace WebApplication3.Client.ViewModels
                 Title = questionViewModel.Title,
                 Likes = questionViewModel.Likes,
                 Contents = questionViewModel.Contents,
-                IdSubject = questionViewModel.IdSubject
+                IdSubject = questionViewModel.IdSubject,
+                Picture = questionViewModel.Picture
             };
         }
 
@@ -79,7 +81,8 @@ namespace WebApplication3.Client.ViewModels
                 Title = question.Title,
                 Likes = question.Likes,
                 Contents = question.Contents,
-                IdSubject = question.IdSubject
+                IdSubject = question.IdSubject,
+                Picture = question.Picture
             };
         }
     }

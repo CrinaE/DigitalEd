@@ -17,6 +17,7 @@ namespace WebApplication3.Shared.Models
         public int? Likes { get; set; }
         public string Contents { get; set; }
         public int? IdSubject { get; set; }
+        public string Picture { get; set; }
         public virtual User IdUserNavigation { get; set; }
         public virtual Subjects IdSubjectNavigation { get; set; }
         public virtual ICollection<Answers> Answers { get; set; }

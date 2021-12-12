@@ -14,6 +14,7 @@ namespace WebApplication3.Client.ViewModels
         public int? Likes { get; set; }
         public string Contents { get; set; }
         public int? IdSubject { get; set; }
+        public string Picture { get; set; }
         public List<Question> Question { get; set; }
         public List<Question> YourQuestion { get; set; }
 

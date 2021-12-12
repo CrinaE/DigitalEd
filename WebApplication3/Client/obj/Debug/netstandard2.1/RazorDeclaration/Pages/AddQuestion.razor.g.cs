@@ -145,7 +145,7 @@ using Microsoft.AspNetCore.Components.Authorization;
         var file = files.FirstOrDefault();
         var img = await file.ToImageFileAsync("image/jpeg", 250, 250);
         MemoryStream memory = await img.ReadAllAsync();
-        //_registerViewModel.ProfilePic = ToDataUrl(memory, "image/jpeg");
+        _questionViewModel.Picture = ToDataUrl(memory, "image/jpeg");
     }
     public string ToDataUrl(MemoryStream data, string format)
     {
