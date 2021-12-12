@@ -89,6 +89,27 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\YourQuestions.razor"
+using WebApplication3.Client.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/yourQuestion")]
     public partial class YourQuestions : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -97,6 +118,18 @@ using Microsoft.AspNetCore.Components.Authorization;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 17 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\YourQuestions.razor"
+       
+    protected override async Task OnInitializedAsync()
+    {
+        await _questionViewModel.LoadYourQeustion();
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IQuestionViewModel _questionViewModel { get; set; }
     }
 }
 #pragma warning restore 1591

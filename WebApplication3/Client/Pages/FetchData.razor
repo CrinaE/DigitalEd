@@ -1,46 +1,25 @@
 @page "/fetchdata"
-@using WebApplication3.Shared
+@using WebApplication3.Client.ViewModels
+@inject IQuestionViewModel _questionViewModel
+@inject IAnswerViewModel _answerViewModel
 @inject HttpClient Http
 
-<h1>Weather forecast</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-
+<h3>YourQuestions</h3>
+<div class="col-12">
+    @if (_answerViewModel.Answers != null && _answerViewModel.Answers.Count() > 0)
+    {
+        @foreach (var answer in _answerViewModel.Answers)
+        {
+            <a href="/question/@answer.IdQuestion"
+               class="list-group-item list-group-item-action flex-column align-items-start bold-text">
+                 <span> </span> @answer.Contents
+            </a>
+        }
+    }
+</div>
 @code {
-    private WeatherForecast[] forecasts;
-
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        await _answerViewModel.LoadYourAnswers();
     }
-
 }

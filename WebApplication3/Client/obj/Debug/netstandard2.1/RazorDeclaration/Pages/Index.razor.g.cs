@@ -83,8 +83,15 @@ using WebApplication3.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\_Imports.razor"
-using Microsoft.AspNetCore.Components.Authorization;
+#line 12 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen;
 
 #line default
 #line hidden
@@ -92,6 +99,13 @@ using Microsoft.AspNetCore.Components.Authorization;
 #nullable restore
 #line 3 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Index.razor"
 using WebApplication3.Client.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Index.razor"
+using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
@@ -105,12 +119,12 @@ using WebApplication3.Client.ViewModels;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Index.razor"
+#line 28 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Index.razor"
  
-        public void go()
-        {
-            _navigationManager.NavigateTo("/addQuestion", true);
-        }
+    public void go()
+    {
+        _navigationManager.NavigateTo("/addQuestion", true);
+    }
     protected override async Task OnInitializedAsync()
     {
         await _questionViewModel.Load();

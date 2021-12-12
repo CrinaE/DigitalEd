@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[3.2.1, )"
             },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
             "SQLite": {
               "target": "Package",
               "version": "[3.13.0, )"

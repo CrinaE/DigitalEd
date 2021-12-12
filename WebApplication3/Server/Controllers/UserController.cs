@@ -98,9 +98,21 @@ namespace WebApplication3.Server.Controllers
             newUser.Email = user.Email;
             newUser.Password = Utility.Encrypt(user.Password);
             newUser.ProfilePic = user.ProfilePic;
+            newUser.Points = 0;
             _context.User.Add(newUser);
             await _context.SaveChangesAsync();
             return await Task.FromResult(newUser);
+        }
+
+
+        [HttpGet("points")]
+        public async Task<Task<int?>> GetPoints()
+        {
+            User user = new User();
+            user.Email = User.FindFirstValue(ClaimTypes.Name);
+            user = await _context.User.Where(u => u.Email == user.Email).FirstOrDefaultAsync();
+            
+            return Task.FromResult(user.Points);
         }
 
         [HttpPut("updateprofile/{userId}")]

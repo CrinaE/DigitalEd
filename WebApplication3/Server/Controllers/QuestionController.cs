@@ -32,6 +32,12 @@ namespace WebApplication3.Server.Controllers
             return _context.Question.ToList();
 
         }
+        [HttpGet("getyourquestion")]
+        public async Task<List<Question>> GetYourQuestions()
+        {
+            return await _context.Question.Where(q => q.IdUser == Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier))).ToListAsync();
+
+        }
 
         // GET api/<QuestionController>/5
         [HttpGet("{id}")]

@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using WebApplication3.Server.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,24 +16,43 @@ namespace WebApplication3.Server.Controllers
     [ApiController]
     public class AnswersController : ControllerBase
     {
-        // GET: api/<AnswersController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly ILogger<AnswersController> logger;
+        private readonly DigitalEduContext _context;
+
+        public AnswersController(ILogger<AnswersController> logger, DigitalEduContext context)
         {
-            return new string[] { "value1", "value2" };
+            this.logger = logger;
+            this._context = context;
         }
 
-        // GET api/<AnswersController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        // GET: api/<AnswersController>
+        [HttpGet("{questionId}")]
+        public List<Answers> Get(int questionId)
         {
-            return "value";
+            return _context.Answers.Where(q => q.IdQuestion == questionId).ToList();
+
+        }
+
+        [HttpGet("getyouranswers")]
+        public async Task<List<Answers>> GetYourAnswers()
+        {
+            return await _context.Answers.Where(q => q.IdUser == Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier))).ToListAsync();
+
         }
 
         // POST api/<AnswersController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPut("newanswer")]
+        public async Task<ActionResult<Answers>> NewQuestion(Answers answer)
         {
+            Answers newAnswer = new Answers();
+            newAnswer.Id = _context.Answers.Max(Answer => Answer.Id) + 1;
+            newAnswer.IdUser = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            newAnswer.Likes = 0;
+            newAnswer.Contents = answer.Contents;
+            newAnswer.IdQuestion = answer.IdQuestion;
+            _context.Answers.Add(newAnswer);
+            await _context.SaveChangesAsync();
+            return await Task.FromResult(newAnswer);
         }
 
         // PUT api/<AnswersController>/5
