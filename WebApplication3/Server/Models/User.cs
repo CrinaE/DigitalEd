@@ -15,7 +15,6 @@ namespace WebApplication3.Server.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string Token { get; set; }
         public int? Points { get; set; }
         public string ProfilePic { get; set; }
 
