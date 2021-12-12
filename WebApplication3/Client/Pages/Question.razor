@@ -6,8 +6,21 @@
 <h1>Question</h1>
 <h2>@_questionViewModel.Title</h2>
 <h3>@_questionViewModel.Contents</h3>
+<span>&nbsp;&nbsp;</span>
+<input type="text" @bind-value="_answerViewModel.Contents" class="form-control" placeholder="Answer's content">
+<br />
 <button class="btn btn-primary" @onclick="add">Put your answer</button>
 <br />
+@if (_answerViewModel.Answers != null && _answerViewModel.Answers.Count() > 0)
+{
+    @foreach (var answer in _answerViewModel.Answers)
+    {
+        <a
+           class="list-group-item list-group-item-action flex-column align-items-start bold-text">
+           <span> </span> @answer.Contents
+        </a>
+    }
+}
 @code {
     [Parameter]
     public int QId { get; set; }
@@ -21,6 +34,8 @@
     protected override async Task OnInitializedAsync()
     {
         _questionViewModel.Id = QId;
+        _answerViewModel.IdQuestion = QId;
         await _questionViewModel.LoadaQeustion();
+        await _answerViewModel.Load();
     }
 }

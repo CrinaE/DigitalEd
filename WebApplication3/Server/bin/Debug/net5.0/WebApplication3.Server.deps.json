@@ -826,6 +826,23 @@
           "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {}
         }
       },
+      "Radzen.Blazor/2.5.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6",
+          "Microsoft.CSharp": "4.7.0",
+          "System.Linq.Dynamic.Core": "1.0.19"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Radzen.Blazor.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/Radzen.Blazor.dll": {}
+        }
+      },
       "SQLite/3.13.0": {
         "runtimeTargets": {
           "runtimes/linux-x64/native/libsqlite3.so": {
@@ -854,6 +871,17 @@
       "System.Collections.Immutable/1.7.1": {},
       "System.ComponentModel.Annotations/4.7.0": {},
       "System.Diagnostics.DiagnosticSource/4.7.1": {},
+      "System.Linq.Dynamic.Core/1.0.19": {
+        "runtime": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.0.19.0",
+            "fileVersion": "1.0.19.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
+        }
+      },
       "System.Net.Http.Json/3.2.0": {
         "dependencies": {
           "System.Text.Json": "4.7.1"
@@ -897,6 +925,7 @@
           "Microsoft.AspNetCore.Components.Authorization": "3.1.6",
           "Microsoft.AspNetCore.Components.Web": "3.1.6",
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.1",
+          "Radzen.Blazor": "2.5.0",
           "SQLite": "3.13.0",
           "System.Net.Http.Json": "3.2.0",
           "WebApplication3.Shared": "1.0.0"
@@ -3101,6 +3130,13 @@
       "path": "npgsql.entityframeworkcore.postgresql.design/1.1.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512"
     },
+    "Radzen.Blazor/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-50qF5u5YlmLjaJLl8C2lHWXZPCVb9EbiDVTZ/OIVIKzce3ShBKU84Tq2eljTOsEzBq9yBssoNmO7NQKfO0Ft+A==",
+      "path": "radzen.blazor/2.5.0",
+      "hashPath": "radzen.blazor.2.5.0.nupkg.sha512"
+    },
     "SQLite/3.13.0": {
       "type": "package",
       "serviceable": true,
@@ -3135,6 +3171,13 @@
       "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
       "path": "system.diagnostics.diagnosticsource/4.7.1",
       "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.0.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GFYslLz/1ZZ0+gbqYED2zlD0H95BIK4hOpIcEEEfTDDXAcKE5vpXQQseOGduNVjcJZOF3Wx+4npa2EjdFpuDgA==",
+      "path": "system.linq.dynamic.core/1.0.19",
+      "hashPath": "system.linq.dynamic.core.1.0.19.nupkg.sha512"
     },
     "System.Net.Http.Json/3.2.0": {
       "type": "package",

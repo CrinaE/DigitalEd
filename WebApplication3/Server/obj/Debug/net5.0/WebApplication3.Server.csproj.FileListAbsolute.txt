@@ -211,3 +211,5 @@ C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Server\obj\Debu
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Server\obj\Debug\net5.0\ref\WebApplication3.Server.dll
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Server\obj\Debug\net5.0\WebApplication3.Server.pdb
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Server\obj\Debug\net5.0\WebApplication3.Server.genruntimeconfig.cache
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Server\bin\Debug\net5.0\Radzen.Blazor.dll
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Server\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll

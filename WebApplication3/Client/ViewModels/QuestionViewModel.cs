@@ -17,6 +17,7 @@ namespace WebApplication3.Client.ViewModels
         public string Contents { get; set; }
         public int? IdSubject { get; set; }
         public List<Question> Question { get; set; }
+        public List<Question> YourQuestion { get; set; }
 
         public HttpClient _httpClient;
         public QuestionViewModel()
@@ -49,6 +50,11 @@ namespace WebApplication3.Client.ViewModels
         {
             Question question = await _httpClient.GetFromJsonAsync<Question>("question/getquestion/" + this.Id);
             LoadCurrentObject(question);
+        }
+
+        public async Task LoadYourQeustion()
+        {
+            this.YourQuestion = await _httpClient.GetFromJsonAsync<List<Question>>("question/getyourquestion/");
         }
 
         public static implicit operator Question(QuestionViewModel questionViewModel)

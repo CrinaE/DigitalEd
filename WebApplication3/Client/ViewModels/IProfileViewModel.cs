@@ -13,11 +13,11 @@ namespace WebApplication3.Client.ViewModels
         public string EmailAddress { get; set; }
         public string Message { get; set; }
         public string ProfilePic { get; set; }
-
+        public double points { get; set; }
 
         public Task UpdateProfile();
 
         public Task GetProfile();
-        
+
     }
 }

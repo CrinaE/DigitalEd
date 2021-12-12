@@ -1,6 +1,25 @@
-﻿@page "/yourpoints" 
+﻿@page "/yourpoints"
+@using WebApplication3.Client.ViewModels
+@inject IProfileViewModel _profileViewModel
+@inject AuthenticationStateProvider _authenticationStateProvider
+@using System.Security.Claims
 <h3>YourPoints</h3>
 
-@code {
+<div class="row">
 
+    <div class="col-xl-6">
+        <h3>ProgressBar in determinate mode</h3><RadzenProgressBar @bind-Value="@value" Style="margin-bottom: 20px" /><br />
+    </div>
+</div>
+@code {
+    double value = 55;
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        var claim = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier);
+        _profileViewModel.UserId = Convert.ToInt32(claim.Value);
+        await _profileViewModel.GetProfile();
+        value = _profileViewModel.points;
+    }
 }

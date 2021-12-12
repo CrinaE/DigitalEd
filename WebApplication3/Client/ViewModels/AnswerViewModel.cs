@@ -40,6 +40,11 @@ namespace WebApplication3.Client.ViewModels
             this.Answers = await _httpClient.GetFromJsonAsync<List<Answers>>("answers/"+this.IdQuestion);
         }
 
+        public async Task LoadYourAnswers()
+        {
+            this.Answers = await _httpClient.GetFromJsonAsync<List<Answers>>("answers/getyouranswers/");
+        }
+
         public static implicit operator Answers(AnswerViewModel answerViewModel)
         {
             return new Answers

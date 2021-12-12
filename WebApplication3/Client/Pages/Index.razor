@@ -2,28 +2,34 @@
 @inject NavigationManager _navigationManager
 @using WebApplication3.Client.ViewModels
 @inject IQuestionViewModel _questionViewModel
+@using Microsoft.AspNetCore.Components.Authorization
 <h1>Welcome to DigitalEdu!</h1>
 
 <div class="col-12">
-    <button class="btn btn-primary" @onclick="go">Add a new Question</button>
-    <br />
-    @if (_questionViewModel.Question != null && _questionViewModel.Question.Count() > 0)
-    {
-        @foreach (var question in _questionViewModel.Question)
-        {
-            <a href="/question/@question.Id"
-               class="list-group-item list-group-item-action flex-column align-items-start bold-text">
-                @question.Title <span> </span> @question.Contents
-            </a>
-        }
-    }
+    <AuthorizeView>
+        <Authorized>
+            <button class="btn btn-primary" @onclick="go"><span class="oi oi-pencil"></span>Add a new Question</button>
+            <br />
+        </Authorized>
+    </AuthorizeView>
+           
+ @if (_questionViewModel.Question != null && _questionViewModel.Question.Count() > 0)
+  {
+    @foreach (var question in _questionViewModel.Question)
+     {
+      <a href="/question/@question.Id"
+      class="list-group-item list-group-item-action flex-column align-items-start bold-text">
+      @question.Title <span> </span> @question.Contents
+      </a>
+     }
+  }
 </div>
 @code
 {
-        public void go()
-        {
-            _navigationManager.NavigateTo("/addQuestion", true);
-        }
+    public void go()
+    {
+        _navigationManager.NavigateTo("/addQuestion", true);
+    }
     protected override async Task OnInitializedAsync()
     {
         await _questionViewModel.Load();

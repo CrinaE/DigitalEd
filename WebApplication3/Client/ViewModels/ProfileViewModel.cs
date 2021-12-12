@@ -16,7 +16,7 @@ namespace WebApplication3.Client.ViewModels
         public string EmailAddress { get; set; }
         public string Message { get; set; }
         public string ProfilePic { get; set; }
-
+        public double points { get; set; }
 
         private HttpClient _httpClient;
 
@@ -50,8 +50,9 @@ namespace WebApplication3.Client.ViewModels
             this.LastName = profileViewModel.LastName;
             this.EmailAddress = profileViewModel.EmailAddress;
             this.ProfilePic = profileViewModel.ProfilePic;
-            //add more fields
+            this.points = profileViewModel.points;
         }
+
 
         public static implicit operator ProfileViewModel(User user)
         {
@@ -61,7 +62,8 @@ namespace WebApplication3.Client.ViewModels
                 LastName = user.LastName,
                 EmailAddress = user.Email,
                 UserId = user.Id,
-                ProfilePic = user.ProfilePic
+                ProfilePic = user.ProfilePic,
+                points = (double)user.Points
             };
         }
 
@@ -73,7 +75,8 @@ namespace WebApplication3.Client.ViewModels
                 LastName = profileViewModel.LastName,
                 Email = profileViewModel.EmailAddress,
                 Id = (int)profileViewModel.UserId,
-                ProfilePic = profileViewModel.ProfilePic
+                ProfilePic = profileViewModel.ProfilePic,
+                Points = (int?)profileViewModel.points
             };
         }
     }

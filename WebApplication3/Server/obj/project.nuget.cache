@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Qiz3rQLgxQcbZO4N60whCuodTQ0QrR5GJ+ucIQCwRmPiJv2oM3i/stcw3AE6+7WHw6NDNMBUq8fKhGW3h3HlCQ==",
+  "dgSpecHash": "5uQctcxOZJIUfWR1+C5TU4j0OkR9uFNYu0wqyhXfJoEHf/+RjbTrfP5jv+EJHDitCVMzZP7grISE3XxbhjaSEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\S2018-438316\\Documents\\GitHub\\DigitalEd\\WebApplication3\\Server\\WebApplication3.Server.csproj",
   "expectedPackageFiles": [
@@ -72,11 +72,13 @@
     "C:\\Users\\S2018-438316\\.nuget\\packages\\npgsql\\4.1.0\\npgsql.4.1.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\3.0.0\\npgsql.entityframeworkcore.postgresql.3.0.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.design\\1.1.0\\npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512",
+    "C:\\Users\\S2018-438316\\.nuget\\packages\\radzen.blazor\\2.5.0\\radzen.blazor.2.5.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\S2018-438316\\.nuget\\packages\\system.linq.dynamic.core\\1.0.19\\system.linq.dynamic.core.1.0.19.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.net.http.json\\3.2.0\\system.net.http.json.3.2.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
     "C:\\Users\\S2018-438316\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",

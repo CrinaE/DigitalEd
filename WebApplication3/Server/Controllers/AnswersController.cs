@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace WebApplication3.Server.Controllers
         public List<Answers> Get(int questionId)
         {
             return _context.Answers.Where(q => q.IdQuestion == questionId).ToList();
+
+        }
+
+        [HttpGet("getyouranswers")]
+        public async Task<List<Answers>> GetYourAnswers()
+        {
+            return await _context.Answers.Where(q => q.IdUser == Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier))).ToListAsync();
 
         }
 

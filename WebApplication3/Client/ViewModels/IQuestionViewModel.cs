@@ -15,10 +15,13 @@ namespace WebApplication3.Client.ViewModels
         public string Contents { get; set; }
         public int? IdSubject { get; set; }
         public List<Question> Question { get; set; }
+        public List<Question> YourQuestion { get; set; }
 
         public Task Add();
         public Task Load();
         public Task LoadaQeustion();
+        public Task LoadYourQeustion();
+
 
     }
 }

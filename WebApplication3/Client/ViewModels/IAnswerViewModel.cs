@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication3.Shared.Models;
 
 namespace WebApplication3.Client.ViewModels
 {
@@ -12,7 +13,10 @@ namespace WebApplication3.Client.ViewModels
         public int? Likes { get; set; }
         public string Contents { get; set; }
         public int? IdQuestion { get; set; }
+        public List<Answers> Answers { get; set; }
+
         public Task Add();
         public Task Load();
+        public Task LoadYourAnswers();
     }
 }
