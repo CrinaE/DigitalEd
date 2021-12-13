@@ -1,6 +1,23 @@
-﻿@page "/yourpoints" 
-<h3>YourPoints</h3>
-
+﻿@page "/yourpoints"
+<h2>YourPoints</h2>
+<div>
+<h3>Here you can check your progress based on the number of your answers, answers rightness and response speed. </h3>
+</div>
+<div class="row">
+    <div class="col-xl-6">
+        <div>
+        <h3>Points</h3>
+        <RadzenProgressBar @bind-Value="@value" Style="margin-bottom: 20px" />
+        <br />
+        </div>
+       
+        <div>
+            <h3>Response speed</h3>
+            <RadzenProgressBar @bind-Value="@value" Style="margin-bottom: 20px" />
+            <br />
+        </div>
+    </div>
+</div>
 @code {
-
-}
+    double value = 45;
+    }

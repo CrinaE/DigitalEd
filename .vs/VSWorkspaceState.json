@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApplication3",
+    "\\WebApplication3\\Client",
+    "\\WebApplication3\\Client\\Pages",
+    "\\WebApplication3\\Server",
+    "\\WebApplication3\\Server\\Controllers"
+  ],
+  "SelectedNode": "\\WebApplication3\\Client\\Pages\\Index.razor",
+  "PreviewInSolutionExplorer": false
+}

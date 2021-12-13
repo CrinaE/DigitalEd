@@ -83,6 +83,20 @@ using WebApplication3.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\Shared\NavMenu.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

@@ -89,6 +89,20 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/yourpoints")]
     public partial class YourPoints : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -97,6 +111,15 @@ using Microsoft.AspNetCore.Components.Authorization;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 21 "C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\Pages\YourPoints.razor"
+       
+    double value = 45;
+    
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
