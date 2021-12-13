@@ -5,21 +5,23 @@
 @using System.IO
 @inject NavigationManager _navigationManager
 
-<h3>Register</h3>
+<h3><b>Register</b></h3>
 <div class="col-12">
     <div class="col-8">
-        <input type="text" @bind-value="_registerViewModel.FirstName" class="form-control" placeholder="first name">
-        <br />
-        <input type="text" @bind-value="_registerViewModel.LastName" class="form-control" placeholder="last name">
-        <br />
-        <input type="text" @bind-value="_registerViewModel.EmailAddress" class="form-control" placeholder="email address">
-        <br />
-        <input type="password" @bind-value="_registerViewModel.Password" class="form-control" placeholder="password">
-        <br />
-        <img src="@_registerViewModel.ProfilePic" style="width: 250px; height: 250px;"> <br /> <br />
-        <InputFile OnChange="@OnInputFileChanged"></InputFile>
-        <br />
-        <button class="btn btn-primary" @onclick="RegisterUser">Sing up!</button>
+        <RadzenCard>
+            <input type="text" @bind-value="_registerViewModel.FirstName" class="form-control" placeholder="first name">
+            <br />
+            <input type="text" @bind-value="_registerViewModel.LastName" class="form-control" placeholder="last name">
+            <br />
+            <input type="text" @bind-value="_registerViewModel.EmailAddress" class="form-control" placeholder="email address">
+            <br />
+            <input type="password" @bind-value="_registerViewModel.Password" class="form-control" placeholder="password">
+            <br />
+            <img src="@_registerViewModel.ProfilePic" style="width: 250px; height: 250px;"> <br /> <br />
+            <InputFile OnChange="@OnInputFileChanged"></InputFile>
+            <br />
+            <div class="col-6"><button class="btn btn-primary" @onclick="RegisterUser">Sign up!</button></div>
+        </RadzenCard>
     </div>
 </div>
 @code {

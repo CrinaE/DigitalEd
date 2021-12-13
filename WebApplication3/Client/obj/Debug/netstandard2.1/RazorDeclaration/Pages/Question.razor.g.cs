@@ -119,10 +119,15 @@ using WebApplication3.Client.ViewModels;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Question.razor"
+#line 35 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Question.razor"
        
     [Parameter]
     public int QId { get; set; }
+
+    public void OnClick()
+    {
+        _questionViewModel.Likes++;
+    }
 
     public void add()
     {

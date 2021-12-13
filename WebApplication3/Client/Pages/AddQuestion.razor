@@ -17,6 +17,10 @@
             <br />
             <textarea class="form-control" @bind="_questionViewModel.Contents" placeholder="Contetnt"></textarea>
             <br />
+            <h4 class="mb-4">Subject</h4>
+            <RadzenDropDown AllowClear="true" Data=@_questionViewModel.Subjects @bind-Value=@(_questionViewModel.Subject) 
+            TextProperty="Subject" ValueProperty="ID" Change=@(_questionViewModel.OnChange) Class="w-100" />
+            <br />
             <img src="@_questionViewModel.Picture" style="width: 250px; height: 250px;"> <br /> <br />
             <InputFile OnChange="@OnInputFileChanged"></InputFile>
             <br />
@@ -27,6 +31,12 @@
 </div>
 
 @code {
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await _questionViewModel.LoadSubjects();
+    }
+
     public async Task Add()
     {
         await _questionViewModel.Add();

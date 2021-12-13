@@ -133,7 +133,7 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
+#line 27 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Register.razor"
        
     public string ProfilePicDataUrl { get; set; }
 

@@ -17,6 +17,7 @@ namespace WebApplication3.Client.ViewModels
         public string Message { get; set; }
         public string ProfilePic { get; set; }
         public double points { get; set; }
+        public bool busy { get; set; }
 
         private HttpClient _httpClient;
 
@@ -32,9 +33,11 @@ namespace WebApplication3.Client.ViewModels
 
         public async Task UpdateProfile()
         {
+            busy = true;
             User user = this;
             await _httpClient.PutAsJsonAsync("user/updateprofile/" + this.UserId, user);
             this.Message = "Profile updated successfully";
+            busy = false;
         }
 
         public async Task GetProfile()

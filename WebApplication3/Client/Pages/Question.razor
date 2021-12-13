@@ -4,26 +4,42 @@
 @inject IQuestionViewModel _questionViewModel
 @inject IAnswerViewModel _answerViewModel
 <h1>Question</h1>
+@if (_questionViewModel.Picture != null)
+{
+    <img src="@_questionViewModel.Picture" style="width: 250px; height: 250px;">
+    <br />
+}
+<br />
 <h2>@_questionViewModel.Title</h2>
 <h3>@_questionViewModel.Contents</h3>
+<RadzenButton Click=@(arfs => OnClick()) Icon="thumb_up" ButtonStyle="ButtonStyle.Secondary" />
+<h4>@_questionViewModel.Likes</h4>
+<RadzenButton Click=@(arfs => OnClick()) Icon="thumb_down" ButtonStyle="ButtonStyle.Primary" />
 <span>&nbsp;&nbsp;</span>
-<input type="text" @bind-value="_answerViewModel.Contents" class="form-control" placeholder="Answer's content">
-<br />
+<div class="col-12">
+    <textarea type="text" @bind="_answerViewModel.Contents" class="form-control" placeholder="Answer's content"></textarea>
+    <br />
+</div>
+<span>&nbsp;&nbsp;</span>
 <button class="btn btn-primary" @onclick="add">Put your answer</button>
 <br />
 @if (_answerViewModel.Answers != null && _answerViewModel.Answers.Count() > 0)
 {
     @foreach (var answer in _answerViewModel.Answers)
     {
-        <a
-           class="list-group-item list-group-item-action flex-column align-items-start bold-text">
-           <span> </span> @answer.Contents
+        <a class="list-group-item list-group-item-action flex-column align-items-start bold-text">
+           @answer.Likes| <span> </span> @answer.Contents
         </a>
     }
 }
 @code {
     [Parameter]
     public int QId { get; set; }
+
+    public void OnClick()
+    {
+        _questionViewModel.Likes++;
+    }
 
     public void add()
     {
