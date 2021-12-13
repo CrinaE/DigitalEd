@@ -3519,11 +3519,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Server\\WebApplication3.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Server\\WebApplication3.Server.csproj",
       "projectName": "WebApplication3.Server",
-      "projectPath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Server\\WebApplication3.Server.csproj",
+      "projectPath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Server\\WebApplication3.Server.csproj",
       "packagesPath": "C:\\Users\\Cryna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Server\\obj\\",
+      "outputPath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -3546,11 +3546,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj": {
-              "projectPath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj"
+            "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj": {
+              "projectPath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj"
             },
-            "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {
-              "projectPath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj"
+            "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {
+              "projectPath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj"
             }
           }
         }

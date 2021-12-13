@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <h2><b>Login</b></h2>
     <hr>
-
+    <RadzenCard>
     <div class="col-6">
         <input type="text" @bind="_loginViewModel.EmailAddress" class="form-control" placeholder="email address">
     </div>
@@ -16,8 +16,9 @@
     </div>
     <br />
     <div class="col-6">
-        <button class="btn btn-primary" @onclick="LoginUser">Login</button>
+        <button class="btn btn-secondary" @onclick="LoginUser">Login</button>
     </div>
+        </RadzenCard>
     <br />
     <br />
     <div class="col-6">

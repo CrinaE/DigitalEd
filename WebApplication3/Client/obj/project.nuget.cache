@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SHB8Dc8UEgPKiOlNSQP8VyxWpkkt6Cj3FfOLlp3wSbUOmg4nH+qQSnIXwSsWUSerB32qj8oO+RseacUWv1VxYQ==",
+  "dgSpecHash": "IbWBNQQtpDZ46V/qiNAhHY3NCVS8rMwwePIE4LSdQyIMfG2ontJKuYPosyixuA0yAz/Tq0gdcRr1KoIb+T6Q1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
+  "projectFilePath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Client\\WebApplication3.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cryna\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\Cryna\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {}
+    "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {
+    "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
         "projectName": "WebApplication3.Shared",
-        "projectPath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
+        "projectPath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
         "packagesPath": "C:\\Users\\Cryna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

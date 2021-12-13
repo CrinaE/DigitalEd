@@ -1300,6 +1300,6 @@ C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstanda
 C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\WebApplication3.Client.RazorTargetAssemblyInfo.cache
 C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\WebApplication3.Client.dll
 C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\WebApplication3.Client.pdb
-C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\nuOR2SPe0e-QnJjRm9DLeBccLwnDzrKmV1Qmx1pzLtY=.hash
-C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\T4GBl8W661x9LGBrTlijfPz4qkm4vAfN01ku_yI1_A0=.hash
-C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\z784EA4o04ED2NiVIIZZJQj4O-rbwdgkfUcPF1lGS88=.hash
+C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\VThmZOW-0drn9QN4paTXbgGa-M0gry1XQA_UYzUzAWE=.hash
+C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\zB92KW6qQYrM_jXiuZvYpMxtDOU5witM6KXx292NfIg=.hash
+C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\Ff8qP6HTfv4Ft7ZqOxFOihwJuKkEd6pxEDVfkkGSp6g=.hash

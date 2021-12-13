@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D0bC+X6aT3hvfN8IGhrRSmQWCA072jUqyrIxvQOBAc+fb9cDz7RBr8OBMpV3v6VKyQRAglwKagED+B0C42MGNw==",
+  "dgSpecHash": "zjPcCA8c4Z8Xeub8cAd/di6xOlPBTagh/nM4SsNzIzuQlPBh4tOjT8Hab5HNCOvqMLl78PxTplI/3Af+5bIg4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cryna\\source\\repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
+  "projectFilePath": "C:\\Users\\Cryna\\Source\\Repos\\DigitalEd\\WebApplication3\\Shared\\WebApplication3.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cryna\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512"
   ],

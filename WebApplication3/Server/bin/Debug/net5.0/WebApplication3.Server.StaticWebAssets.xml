@@ -1,6 +1,6 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\bin\Debug\netstandard2.1\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\Cryna\source\repos\DigitalEd\WebApplication3\Client\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Cryna\Source\Repos\DigitalEd\WebApplication3\Client\wwwroot\" />
   <ContentRoot BasePath="_content/BlazorInputFile" Path="C:\Users\Cryna\.nuget\packages\blazorinputfile\0.2.0\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\Cryna\.nuget\packages\radzen.blazor\2.5.0\build\..\staticwebassets\" />
 </StaticWebAssets>
