@@ -6,20 +6,27 @@
 <h3>YourPoints</h3>
 
 <div class="row">
-
-    <div class="col-xl-6">
-        <h3>ProgressBar in determinate mode</h3><RadzenProgressBar @bind-Value="@value" Style="margin-bottom: 20px" /><br />
+    <h3>Here you can check your progress based on the number of your answers, answers rightness and response speed. </h3>
+    <div>
+        <h3>Points</h3>
+        <RadzenProgressBar @bind-Value="@value" Style="margin-bottom: 20px" />
+        <br />
+    </div>
+    <div>
+        <h3>Response speed</h3>
+        <RadzenProgressBar @bind-Value="@value" Style="margin-bottom: 20px" />
+        <br />
     </div>
 </div>
-@code {
-    double value = 55;
-    protected override async Task OnInitializedAsync()
-    {
-        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
-        var user = authState.User;
-        var claim = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier);
-        _profileViewModel.UserId = Convert.ToInt32(claim.Value);
-        await _profileViewModel.GetProfile();
-        value = _profileViewModel.points;
+    @code {
+        double value = 55;
+        protected override async Task OnInitializedAsync()
+        {
+            var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+            var claim = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier);
+            _profileViewModel.UserId = Convert.ToInt32(claim.Value);
+            await _profileViewModel.GetProfile();
+            value = _profileViewModel.points;
+        }
     }
-}

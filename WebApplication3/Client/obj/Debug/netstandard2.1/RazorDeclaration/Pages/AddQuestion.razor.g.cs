@@ -133,8 +133,14 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\AddQuestion.razor"
+#line 33 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\AddQuestion.razor"
        
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await _questionViewModel.LoadSubjects();
+    }
+
     public async Task Add()
     {
         await _questionViewModel.Add();

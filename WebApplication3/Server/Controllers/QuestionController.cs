@@ -32,6 +32,7 @@ namespace WebApplication3.Server.Controllers
             return _context.Question.ToList();
 
         }
+
         [HttpGet("getyourquestion")]
         public async Task<List<Question>> GetYourQuestions()
         {
@@ -58,20 +59,22 @@ namespace WebApplication3.Server.Controllers
         {
             Question newQuestion = new Question();
             newQuestion.Id = _context.Question.Max(question => question.Id) + 1;
-            newQuestion.IdSubject = 1;
+            newQuestion.IdSubject = question.IdSubject;
             newQuestion.IdUser = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier));
             newQuestion.Title = question.Title;
             newQuestion.Likes = 0;
             newQuestion.Contents = question.Contents;
+            newQuestion.Picture = question.Picture;
             _context.Question.Add(newQuestion);
             await _context.SaveChangesAsync();
             return await Task.FromResult(newQuestion);
         }
 
-        // DELETE api/<QuestionController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpGet("getsubjects")]
+        public List<Subjects> GetSubjects()
         {
+            return _context.Subjects.ToList();
+
         }
     }
 }

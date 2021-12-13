@@ -19,6 +19,10 @@ namespace WebApplication3.Client.ViewModels
         public int? IdSubject { get; set; }
         public List<Question> Question { get; set; }
         public List<Question> YourQuestion { get; set; }
+        public List<Subjects> Subjects { get; set; }
+        public string Message { get; set; }
+        public Subjects Subject { get; set; }
+
 
         public HttpClient _httpClient;
         public QuestionViewModel()
@@ -45,6 +49,8 @@ namespace WebApplication3.Client.ViewModels
         {
             this.Title = questionViewModel.Title;
             this.Contents = questionViewModel.Contents;
+            this.Picture = questionViewModel.Picture;
+            this.Likes = questionViewModel.Likes;
         }
 
         public async Task LoadaQeustion()
@@ -56,6 +62,16 @@ namespace WebApplication3.Client.ViewModels
         public async Task LoadYourQeustion()
         {
             this.YourQuestion = await _httpClient.GetFromJsonAsync<List<Question>>("question/getyourquestion/");
+        }
+
+        public async Task LoadSubjects()
+        {
+           this.Subjects = await _httpClient.GetFromJsonAsync<List<Subjects>>("question/getsubjects/");
+        }
+
+        public void OnChange()
+        {
+            this.IdSubject = this.Subject.Id;
         }
 
         public static implicit operator Question(QuestionViewModel questionViewModel)

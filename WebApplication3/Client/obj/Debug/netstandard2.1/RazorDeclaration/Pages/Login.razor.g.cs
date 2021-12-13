@@ -119,7 +119,7 @@ using WebApplication3.Client.ViewModels;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Login.razor"
+#line 42 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\Login.razor"
            
         public async Task LoginUser()
         {

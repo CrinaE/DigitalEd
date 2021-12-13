@@ -7,6 +7,8 @@ namespace WebApplication3.Client.ViewModels
 {
     interface IProfileViewModel
     {
+        public bool busy { get; set; }
+
         public long UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
