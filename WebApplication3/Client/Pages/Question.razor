@@ -3,36 +3,53 @@
 @using WebApplication3.Client.ViewModels
 @inject IQuestionViewModel _questionViewModel
 @inject IAnswerViewModel _answerViewModel
-<h1>Question</h1>
+<h1><b>Question</b></h1>
+<hr />
 @if (_questionViewModel.Picture != null)
 {
     <img src="@_questionViewModel.Picture" style="width: 250px; height: 250px;">
     <br />
 }
 <br />
+<span>&nbsp;&nbsp;</span>
 <h2>@_questionViewModel.Title</h2>
 <h3>@_questionViewModel.Contents</h3>
+<span></span>
 <RadzenButton Click=@(arfs => OnClick()) Icon="thumb_up" ButtonStyle="ButtonStyle.Secondary" />
 <h4>@_questionViewModel.Likes</h4>
 <RadzenButton Click=@(arfs => DownVote()) Icon="thumb_down" ButtonStyle="ButtonStyle.Primary" />
 <span>&nbsp;&nbsp;</span>
-<span>&nbsp;&nbsp;</span>
 <div class="col-9">
-    <textarea type="text" @bind="_answerViewModel.Contents" class="form-control" placeholder="Answer's content"></textarea>
-    <br />
-</div>
-<span>&nbsp;&nbsp;</span>
-<button class="btn btn-primary" @onclick="add">Put your answer</button>
-<br />
-@if (_answerViewModel.Answers != null && _answerViewModel.Answers.Count() > 0)
-{
-    @foreach (var answer in _answerViewModel.Answers)
+    <span>&nbsp;&nbsp;</span>
+    <span>&nbsp;&nbsp;</span>
+    <AuthorizeView>
+        <Authorized>
+            <textarea type="text" @bind="_answerViewModel.Contents" class="form-control" placeholder="Answer's content"></textarea>
+            <br />
+            <span>&nbsp;&nbsp;</span>
+            <button class="btn btn-primary" @onclick="add">Put your answer</button>
+            <br />
+        </Authorized>
+        <NotAuthorized>
+            <span>&nbsp;&nbsp;</span>
+            <span>Please Login to answer!</span>
+            <span>&nbsp;&nbsp;</span>
+        </NotAuthorized>
+    </AuthorizeView>
+    
+    <span>&nbsp;&nbsp;</span>
+    @if (_answerViewModel.Answers != null && _answerViewModel.Answers.Count() > 0)
     {
-        <a class="list-group-item list-group-item-action flex-column align-items-start bold-text">
-           @answer.Likes| <span> </span> @answer.Contents
-        </a>
+        @foreach (var answer in _answerViewModel.Answers)
+        {
+            <a class="list-group-item list-group-item-action flex-column align-items-start bold-text">
+                @answer.Likes| <span> </span> @answer.Contents
+            </a>
+        }
     }
-}
+</div>
+
+
 @code {
     [Parameter]
     public int QId { get; set; }
