@@ -21,5 +21,6 @@ namespace WebApplication3.Client.ViewModels
 
         public Task GetProfile();
 
+        public Task GetPoints();
     }
 }

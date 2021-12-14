@@ -56,6 +56,10 @@ namespace WebApplication3.Client.ViewModels
             this.points = profileViewModel.points;
         }
 
+        public async Task GetPoints()
+        {
+            this.points = (double)await _httpClient.GetFromJsonAsync<int?>("user/totalpoints/");
+        }
 
         public static implicit operator ProfileViewModel(User user)
         {

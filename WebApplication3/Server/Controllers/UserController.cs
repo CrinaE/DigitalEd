@@ -104,6 +104,21 @@ namespace WebApplication3.Server.Controllers
             return await Task.FromResult(newUser);
         }
 
+        [HttpGet("totalpoints")]
+        public async Task<Task<int?>> GetTotalPoints()
+        {
+            User user = new User();
+            user.Email = User.FindFirstValue(ClaimTypes.Name);
+            user = await _context.User.Where(u => u.Email == user.Email).FirstOrDefaultAsync();
+            List<Question> questions = await _context.Question.Where(q => q.IdUser == user.Id).ToListAsync();
+            int? total = 0;
+            foreach(Question question in questions)
+            {
+                total += question.Likes;
+            }
+            user.Points = user.Points + total;
+            return Task.FromResult(user.Points);
+        }
 
         [HttpGet("points")]
         public async Task<Task<int?>> GetPoints()
