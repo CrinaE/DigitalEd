@@ -27,6 +27,6 @@ namespace WebApplication3.Client.ViewModels
         public Task LoadYourQeustion();
         public Task LoadSubjects();
         public void OnChange();
-
+        public Task Like();
     }
 }

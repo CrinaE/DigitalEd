@@ -76,5 +76,18 @@ namespace WebApplication3.Server.Controllers
             return _context.Subjects.ToList();
 
         }
+
+        [HttpPut("like/{questionId}")]
+        public async Task<Question> UpdateProfile(int questionId, [FromBody] Question question)
+        {
+
+            Question questionToUpdate = await _context.Question.Where(u => u.Id == questionId).FirstOrDefaultAsync();
+            questionToUpdate.Likes = question.Likes;
+
+            await _context.SaveChangesAsync();
+
+            return await Task.FromResult(question);
+        }
+
     }
 }

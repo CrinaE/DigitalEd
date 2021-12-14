@@ -14,9 +14,10 @@
 <h3>@_questionViewModel.Contents</h3>
 <RadzenButton Click=@(arfs => OnClick()) Icon="thumb_up" ButtonStyle="ButtonStyle.Secondary" />
 <h4>@_questionViewModel.Likes</h4>
-<RadzenButton Click=@(arfs => OnClick()) Icon="thumb_down" ButtonStyle="ButtonStyle.Primary" />
+<RadzenButton Click=@(arfs => DownVote()) Icon="thumb_down" ButtonStyle="ButtonStyle.Primary" />
 <span>&nbsp;&nbsp;</span>
-<div class="col-12">
+<span>&nbsp;&nbsp;</span>
+<div class="col-9">
     <textarea type="text" @bind="_answerViewModel.Contents" class="form-control" placeholder="Answer's content"></textarea>
     <br />
 </div>
@@ -39,6 +40,13 @@
     public void OnClick()
     {
         _questionViewModel.Likes++;
+        _questionViewModel.Like();
+    }
+
+    public void DownVote()
+    {
+        _questionViewModel.Likes--;
+        _questionViewModel.Like();
     }
 
     public void add()

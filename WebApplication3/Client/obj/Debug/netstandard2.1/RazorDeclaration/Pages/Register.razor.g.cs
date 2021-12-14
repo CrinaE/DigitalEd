@@ -151,10 +151,16 @@ using System.IO;
     }
     public async Task RegisterUser()
     {
-        await _registerViewModel.SaveProfile();
-        _navigationManager.NavigateTo("/", true);
-    }
+        if ( _registerViewModel.EmailAddress != null && _registerViewModel.Password != null && _registerViewModel.FirstName != null && _registerViewModel.LastName != null)
+        {
+            if (_registerViewModel.EmailAddress.Contains('@'))
+            {
+                await _registerViewModel.SaveProfile();
+                _navigationManager.NavigateTo("/", true);
+            }
+        }
 
+    }
 
 #line default
 #line hidden
