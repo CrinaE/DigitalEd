@@ -74,6 +74,12 @@ namespace WebApplication3.Client.ViewModels
             this.IdSubject = this.Subject.Id;
         }
 
+        public async Task Like()
+        {
+            Question question = this;
+            await _httpClient.PutAsJsonAsync("question/like/" + this.Id, question);
+        }
+
         public static implicit operator Question(QuestionViewModel questionViewModel)
         {
             return new Question

@@ -126,19 +126,18 @@ using System.Security.Claims;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\YourPoints.razor"
-           
-        double value = 55;
-        protected override async Task OnInitializedAsync()
-        {
-            var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
-            var user = authState.User;
-            var claim = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier);
-            _profileViewModel.UserId = Convert.ToInt32(claim.Value);
-            await _profileViewModel.GetProfile();
-            value = _profileViewModel.points;
-        }
-    
+#line 25 "C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\Pages\YourPoints.razor"
+       
+    double value = 55;
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        var claim = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier);
+        _profileViewModel.UserId = Convert.ToInt32(claim.Value);
+        await _profileViewModel.GetProfile();
+        value = _profileViewModel.points;
+    }
 
 #line default
 #line hidden

@@ -123,8 +123,15 @@ using WebApplication3.Client.ViewModels;
            
         public async Task LoginUser()
         {
-            await _loginViewModel.LoginUser();
-            _navigationManager.NavigateTo("/", true);
+            if ( _loginViewModel.EmailAddress != null && _loginViewModel.Password != null)
+            {
+                if(_loginViewModel.EmailAddress.Contains('@'))
+                {
+                    await _loginViewModel.LoginUser();
+                    _navigationManager.NavigateTo("/", true);
+                }
+
+            }
         }
 
         private void FacebookSignIn()
