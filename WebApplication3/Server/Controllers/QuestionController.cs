@@ -40,12 +40,7 @@ namespace WebApplication3.Server.Controllers
 
         }
 
-        // GET api/<QuestionController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        
 
         [HttpGet("getquestion/{questionId}")]
         public async Task<Question> GetProfile(int questionId)

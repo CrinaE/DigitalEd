@@ -42,7 +42,7 @@ namespace WebApplication3.Server.Controllers
 
         // POST api/<AnswersController>
         [HttpPut("newanswer")]
-        public async Task<ActionResult<Answers>> NewQuestion(Answers answer)
+        public async Task<ActionResult<Answers>> NewAnswer(Answers answer)
         {
             Answers newAnswer = new Answers();
             newAnswer.Id = _context.Answers.Max(Answer => Answer.Id) + 1;

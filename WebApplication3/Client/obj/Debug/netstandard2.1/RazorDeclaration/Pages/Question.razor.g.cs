@@ -145,10 +145,11 @@ using WebApplication3.Client.ViewModels;
         _answerViewModel.Likes--;
 
     }
-    public void add()
+    public async Task add()
     {
         _answerViewModel.IdQuestion = QId;
-        _answerViewModel.Add();
+        await _answerViewModel.Add();
+        _navigationManager.NavigateTo("/question/"+QId, true);
     }
 
     protected override async Task OnInitializedAsync()
