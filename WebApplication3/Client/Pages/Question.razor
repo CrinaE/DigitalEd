@@ -11,7 +11,6 @@
     <br />
 }
 <br />
-<span>&nbsp;&nbsp;</span>
 <h2>@_questionViewModel.Title</h2>
 <h3>@_questionViewModel.Contents</h3>
 <span></span>
@@ -42,9 +41,11 @@
     {
         @foreach (var answer in _answerViewModel.Answers)
         {
-            <a class="list-group-item list-group-item-action flex-column align-items-start bold-text">
-                @answer.Likes| <span> </span> @answer.Contents
-            </a>
+<a class="list-group-item list-group-item-action flex-column align-items-start bold-text">
+    <RadzenButton Click=@(arfs => OnClickAnswer()) Icon="thumb_up" ButtonStyle="ButtonStyle.Secondary" />
+    @answer.Likes 
+    <RadzenButton Click=@(arfs => DownVoteAnswer()) Icon="thumb_down" ButtonStyle="ButtonStyle.Primary" />| <span> </span> @answer.Contents
+</a>
         }
     }
 </div>
@@ -65,7 +66,16 @@
         _questionViewModel.Likes--;
         _questionViewModel.Like();
     }
+    public void OnClickAnswer()
+    {
+        _answerViewModel.Likes++;
 
+    }
+    public void DownVoteAnswer()
+    {
+        _answerViewModel.Likes--;
+
+    }
     public void add()
     {
         _answerViewModel.IdQuestion = QId;

@@ -880,6 +880,6 @@ C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debu
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Linq.Dynamic.Core.pdb.br
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\o2r1ZsoV9odJnLDrEzk2YRO7OhOVVBj-HiOtlJ62x94=.hash
 C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\1RhD5HZis18UbVzjFXAYY_8C75LalvOdWIQtwcB1S9Q=.hash
-C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\rokO4evRP0iYzNBKXNa3D5K4iFmLDZa0syz9aK4Xk0I=.hash
-C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\j7Dup5K1LczhUoVXqfKkCC6VHogV0keBl7IgkDJUxGI=.hash
-C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\6qC9aEGJ2pD5xoQSpPML0bd3PC8HyKm9HFjcCe67gu4=.hash
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\xl3UlZsyoooQQspHjvFVFslcaYdqyIWEODs6pUnD0nM=.hash
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\6uww590OqZKZK52b49kxMWRk3yTk8_Ea9Z0TIwA6gac=.hash
+C:\Users\S2018-438316\Documents\GitHub\DigitalEd\WebApplication3\Client\obj\Debug\netstandard2.1\integrity\ohKFwkYCRpqWh9dIyOVWmaS8j3SnDG8dWb-KbUCM61g=.hash
